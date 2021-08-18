@@ -19,6 +19,7 @@ class UsersSeeders extends Seeder
         $user->name = 'admin';
         $user->password = bcrypt('12345678');
         $user->alamat = 'banyuwangi';
+        $user->role='admin';
         $user->save();
     }
 }
