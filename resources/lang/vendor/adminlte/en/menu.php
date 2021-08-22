@@ -19,4 +19,24 @@ return [
     'important'                     => 'Important',
     'warning'                       => 'Warning',
     'information'                   => 'Information',
+    'mon'                           => 'Monday',
+    'tue'                           => 'Tuesday',
+    'wed'                           => 'Wednesday',
+    'thu'                           => 'Thursday',
+    'fri'                           => 'Friday',
+    'sat'                           => 'Saturday',
+    'sun'                           => 'Sunday',
+    'profit'                        => 'Profit',
+    'loss'                          => 'Loss',
+    'average'                       => 'Average',
+    'name'                          => 'Name',
+    'qty'                           => 'Quantity',
+    'dist'                          => 'Distributor',
+    'sale'                          => 'Sale',
+    'sum'                           => 'Summary',
+    'visitors'                      => 'Visitors',
+    'orders'                        => 'Orders',
+    'more'                          => 'More'
+
+
 ];
