@@ -24,6 +24,7 @@ class AdminController extends Controller
                 return redirect('/admin');
             }
         }
+
         return view('layouts.admin.login');
     }
 
