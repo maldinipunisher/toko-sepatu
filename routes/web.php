@@ -18,14 +18,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home']);
 
-Route::get('/register', [LoginController::class,'register'])->name('register');
+Route::get('/register', [LoginController::class,'register'])->name('register')->middleware('guest');
 Route::post('/register', [LoginController::class , 'register_action'])->name('register_action');
-Route::get('/login', [LoginController::class, 'login'])->name('login')->name('login');
+Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'login_action'])->name('login_action');
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 Route::prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class , 'dashboard']);
-    Route::get('/login',[AdminController::class, 'login']);
-    Route::post('/login',[AdminController::class, 'login_action']);
-
+    Route::get('/', [AdminController::class , 'dashboard'])->middleware('auth')->middleware('role:admin');
+    // Route::get('/login',[AdminController::class, 'login'])->middleware('guest');
+    // Route::post('/login',[AdminController::class, 'login_action'])->middleware('guest');
 });
