@@ -24,7 +24,10 @@ Route::get('/login', [LoginController::class, 'login'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'login_action'])->name('login_action');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 Route::prefix('admin')->group(function () {
-    Route::get('/', [AdminController::class , 'dashboard'])->middleware('auth')->middleware('role:admin');
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/', [AdminController::class , 'dashboard'])->middleware('role:admin');
+        Route::get('/users', [AdminController::class, 'users'])->middleware('role:admin');
+    });
     // Route::get('/login',[AdminController::class, 'login'])->middleware('guest');
     // Route::post('/login',[AdminController::class, 'login_action'])->middleware('guest');
 });

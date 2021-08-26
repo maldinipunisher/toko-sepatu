@@ -30,4 +30,8 @@ class AdminController extends Controller
         }
         return back()->withErrors(['email' => 'identitas tidak cocok dengan akun manapun']);
     }
+
+    public function users(){
+        return view('layouts.admin.users');
+    }
 }
