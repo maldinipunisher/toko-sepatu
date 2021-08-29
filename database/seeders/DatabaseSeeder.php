@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ProductUser;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,14 +16,14 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             RoleSeeder::class,
-            CartSeeders::class,
             UsersSeeders::class,
             PaymentMethodSeeders::class,
             MarketSeeders::class,
             CategorySeeders::class,
             SupplierSeeders::class,
             OrderSeeders::class,
-            ProductSeeders::class
+            ProductSeeders::class,
+            ProductUserSeeders::class
         ]);
     }
 }

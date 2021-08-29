@@ -34,4 +34,12 @@ class AdminController extends Controller
     public function users(){
         return view('layouts.admin.users');
     }
+
+    public function orders(){
+        return view('layouts.admin.orders');
+    }
+
+    public function profile(){
+        return view('layouts.admin.profile');
+    }
 }

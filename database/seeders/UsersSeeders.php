@@ -22,7 +22,7 @@ class UsersSeeders extends Seeder
         $user->address = 'banyuwangi';
         $user->role=1;
         $user->phone="082242751237";
-        $user->cart=$user->user_id ;
+        // $user->cart=$user->user_id ;
         $user->save();
 
         // $user2 = new User();

@@ -36,7 +36,22 @@ return [
     'sum'                           => 'Summary',
     'visitors'                      => 'Visitors',
     'orders'                        => 'Orders',
-    'more'                          => 'More'
+    'more'                          => 'More',
+    'suppliers'                     => 'Suppliers',
+    'status'                        => 'Status',
+    'view'                          => 'View',
+    'edit'                          => 'Edit',
+    'delete'                        => 'Delete',
+    'success'                       => 'Success',
+    'ondelivery'                    => 'On Delivery',
+    'cancel'                        => 'Canceled',
+    'onprocess'                     => 'On Process',
+    'return'                        => 'Returned',
+    'address'                       => 'Address',
+    'hp'                            => 'Handphone Number',
+    'role'                          => 'Role',
+    'change_picture'                => 'Change Picture'
+
 
 
 ];

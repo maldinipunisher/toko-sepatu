@@ -21,14 +21,14 @@ class Product extends Model
         'supplier',
         'category',
         'updated_by',
-        'cart',
+        // 'cart',
         'order',
         // 'market',
     ];
 
-    public function user()
+    public function users()
     {
-        return $this->belongsTo(Cart::class, "user", "user_id");
+        return $this->belongsToMany(User::class, null,'product','user');
     }
 
     public function suppliers()
