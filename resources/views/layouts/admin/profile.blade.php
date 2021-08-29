@@ -18,7 +18,7 @@
                     <center><img src="{{ asset('images/user_profile.png')}}" class="  img-fluid rounded-start " alt="..." style="width: 50%">
                     <br><br>
                     <h5>Leon S Kennedy</h5>
-                    <h7 style="font-size: 15px;">Reevil@gmail.com</h7>
+                    <h7 style="font-size: 15px;">ucupgans556@gmail.com</h7>
                 </center>
                 <br>
 
@@ -41,7 +41,7 @@
                       </tr>
                       <tr>
                         <td>E-mail</td>
-                        <td>Reevil@gmail.com</td>
+                        <td>Ucupgans556@gmail.com</td>
                       </tr>
                       <tr>
                         <td>{{ __('adminlte::menu.change_password') }}</td>
