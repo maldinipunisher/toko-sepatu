@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Roles;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,6 +39,8 @@ class LoginController extends Controller
         'password' => 'required|min:6']);
         if(Auth::attempt($credential)){
             $request->session()->regenerate();
+            // $role = Roles::find(2);
+            // dd(Auth::user()->roles);
             return redirect('/');
         }
         return back()->withErrors(['email'=>'identitas tidak cocok dengan akun manapun']);

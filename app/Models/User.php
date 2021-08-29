@@ -2,14 +2,18 @@
 
 namespace App\Models;
 
+use App\Models\Role as ModelsRole;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Role;
 
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
+    protected $primaryKey= 'user_id';
 
     /**
      * The attributes that are mass assignable.
@@ -17,11 +21,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'user_id',
         'name',
         'email',
         'role',
-        'alamat',
+        'address',
+        'phone',
         'password',
+        // 'cart',
+        // 'token'
     ];
 
     /**
@@ -42,4 +50,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function roles(){
+        return $this->belongsTo(ModelsRole::class, 'role', 'role_id');
+    }
+
+    public function password_reset(){
+        return $this->hasOne(PasswordReset::class, 'user_id');
+    }
+
+    public function orders(){
+        return $this->hasMany(Order::class, "user_id");
+    }
+
+    public function products(){
+        return $this->hasMany(Product::class, "user_id");
+    }
 }

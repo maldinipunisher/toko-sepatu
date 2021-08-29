@@ -17,7 +17,7 @@ class Role
     public function handle(Request $request, Closure $next, $role)
     {
         // return $next($request);
-        if($request->user()->role === $role){
+        if($request->user()->roles->name === $role){
             return $next($request);
         }
         return redirect("/");
