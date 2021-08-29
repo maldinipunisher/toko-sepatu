@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->foreign('role')->references('role_id')->on('roles');
             $table->timestamps();
             $table->string('updated_by', 10)->nullable();
+            $table->string('profilepic', 100)->nullable();
+            $table->string('description', 255)->nullable();
             // $table->integer('cart');
             // $table->foreign('cart')->references('cart_id')->on('cart');
             // $table->integer('token')->nullable();

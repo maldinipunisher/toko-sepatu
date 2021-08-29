@@ -28,8 +28,8 @@ class User extends Authenticatable
         'address',
         'phone',
         'password',
-        // 'cart',
-        // 'token'
+        'profilepic',
+        'description'
     ];
 
     /**

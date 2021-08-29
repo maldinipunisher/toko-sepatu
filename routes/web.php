@@ -28,6 +28,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/', [AdminController::class , 'dashboard'])->middleware('role:admin');
         Route::get('/orders', [AdminController::class, 'orders'])->middleware('role:admin');
         Route::get('/users', [AdminController::class, 'users'])->middleware('role:admin');
+        Route::post('/users', [AdminController::class, 'users_action'])->middleware('role:admin');
         Route::get('/profile', [AdminController::class, 'profile'])->middleware('role:admin');
     });
     // Route::get('/login',[AdminController::class, 'login'])->middleware('guest');
