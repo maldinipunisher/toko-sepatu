@@ -15,7 +15,7 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->integer('order_id')->unique()->primary();
-            $table->integer('user');
+            $table->bigInteger('user');
             $table->foreign('user')->references('user_id')->on('users');
             $table->integer('quantity');
             $table->integer('payment_method');

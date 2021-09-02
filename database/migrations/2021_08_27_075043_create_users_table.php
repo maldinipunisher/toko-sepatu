@@ -14,8 +14,8 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->integer('user_id')->primary()->unique();
-            $table->string('name', 16);
+            $table->bigInteger('user_id')->primary()->unique();
+            $table->string('name', 50);
             $table->string('email')->unique();
             $table->string('password',72);
             $table->timestamp('email_verified_at')->nullable();
@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->foreign('role')->references('role_id')->on('roles');
             $table->timestamps();
             $table->string('updated_by', 10)->nullable();
+            $table->string('profilepic', 100)->nullable();
+            $table->string('description', 255)->nullable();
             // $table->integer('cart');
             // $table->foreign('cart')->references('cart_id')->on('cart');
             // $table->integer('token')->nullable();

@@ -22,19 +22,31 @@ class UsersSeeders extends Seeder
         $user->address = 'banyuwangi';
         $user->role=1;
         $user->phone="082242751237";
-        $user->cart=$user->user_id ;
+        $user->description = "Seorang Admin Biasa";
         $user->save();
 
-        // $user2 = new User();
-        // $user2->user_id = 2 ;
-        // $user2->email = 'maldinipunisher@gmail.com';
-        // $user2->name = 'Maldini';
-        // $user2->password = bcrypt('123456');
-        // $user2->address = 'banyuwangi';
-        // $user2->role=2;
-        // $user2->phone="082242751237";
-        // $user2->cart=$user2->user_id ;
+        $user1 = new User();
+        $user1->user_id = 2 ;
+        $user1->email = 'coconut@coconut.com';
+        $user1->name = 'kepala muda';
+        $user1->password = bcrypt('12345678');
+        $user1->address = 'banyuwangi';
+        $user1->role=2;
+        $user1->phone="082876678555";
+        $user1->description = "es kepala muda njoy";
+        $user1->save();
 
-        // $user2->save();
+        $user2 = new User();
+        $user2->user_id = 3 ;
+        $user2->email = 'kamalgans@muach.com';
+        $user2->name = 'latifatul kamal';
+        $user2->password = bcrypt('12345678');
+        $user2->address = 'mars gang sempu';
+        $user2->role=2;
+        $user2->phone="082156245338";
+        $user2->description = "ingat kata patrick, halo sayang";
+        $user2->save();
+
+
     }
 }

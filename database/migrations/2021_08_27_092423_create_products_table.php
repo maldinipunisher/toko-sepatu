@@ -22,8 +22,8 @@ class CreateProductsTable extends Migration
             $table->integer('supplier');
             $table->foreign('supplier')->references('supplier_id')->on('suppliers');
             $table->string('updated_by', 10)->nullable();
-            $table->integer('users');
-            $table->foreign('users')->references('user_id')->on('users');
+            // $table->integer('users');
+            // $table->foreign('users')->references('user_id')->on('users');
             $table->integer('order')->nullable();
             $table->foreign('order')->references('order_id')->on('orders');
             $table->integer('market');

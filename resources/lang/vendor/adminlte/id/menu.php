@@ -36,5 +36,19 @@ return [
     'sum'                           => 'Rangkuman',
     'visitors'                      => 'Pengunjung',
     'orders'                        => 'Pesanan',
-    'more'                          => 'Lanjutan'
+    'more'                          => 'Lanjutan',
+    'suppliers'                     => 'Pemasok',
+    'status'                        => 'Status',
+    'view'                          => 'Lihat',
+    'edit'                          => 'Ubah',
+    'delete'                        => 'Hapus',
+    'success'                       => 'Berhasil',
+    'ondelivery'                    => 'Diantar',
+    'cancel'                        => 'Batal',
+    'onprocess'                     => 'Proses',
+    'return'                        => 'Kembali',
+    'address'                       => 'Alamat',
+    'hp'                            => 'Nomor Handphone',
+    'role'                          => 'Bidang',
+    'change_picture'                => 'Ubah Foto'
 ];

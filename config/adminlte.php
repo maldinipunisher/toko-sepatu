@@ -272,6 +272,13 @@ return [
             'icon' => 'fas fa-fw fa-users',
             'label_color' => 'danger'
         ],
+        [
+            'text' => 'orders',
+            'url'  => 'admin/orders',
+            'label' => 100,
+            'icon' => 'fas fa-fw fa-arrow-down-small-big',
+            'label_color' => 'danger'
+        ],
         ["header" => "API"],
         [
             'text' => "Token",
