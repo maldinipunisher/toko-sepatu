@@ -38,7 +38,7 @@ class LoginController extends Controller
         $user->role = 2 ;
         $user->user_id = $user_id;
         // Storage::putFile($user->user_id ,new File("app/public/".$user->user_id), 'public' );
-        $path = $request->file('profilepic')->storeAs('public/profiles', $user->user_id);
+        $path = $request->file('profilepic')->storeAs('public/profiles', $user->user_id .'.jpg');
         $user->profilepic = Storage::url($path);
         // dd(url($user->profilepic));
 

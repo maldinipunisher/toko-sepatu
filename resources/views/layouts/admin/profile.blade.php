@@ -15,10 +15,10 @@
 
                 </div> --}}
                     {{-- <a class="position-absolute" style="margin-top: 70px; margin-right: 60px;" href="#>"<i class="position-absolute fa fa-fw fa-camera " ></i>AWDWAD</a> --}}
-                    <center><img src="{{ asset('images/user_profile.png')}}" class="  img-fluid rounded-start " alt="..." style="width: 50%">
+                    <center><img src="@if(Auth::user()->profilepic != null) {{ url(Auth::user()->profilepic) }} @else{{ asset('images/user_profile.png')}} @endif" class="  img-fluid rounded-start " alt="..." style="width: 50%">
                     <br><br>
-                    <h5>Leon S Kennedy</h5>
-                    <h7 style="font-size: 15px;">ucupgans556@gmail.com</h7>
+                    <h5>{{ Auth::user()->name }}</h5>
+                    <h7 style="font-size: 15px;">{{ Auth::user()->email }}</h7>
                 </center>
                 <br>
 
@@ -37,11 +37,11 @@
                     <tbody>
                       <tr >
                         <td>{{ __('adminlte::menu.name') }}</td>
-                        <td>Leon S kennedy</td>
+                        <td>{{ Auth::user()->name }}</td>
                       </tr>
                       <tr>
                         <td>E-mail</td>
-                        <td>Ucupgans556@gmail.com</td>
+                        <td>{{ Auth::user()->email }}</td>
                       </tr>
                       <tr>
                         <td>{{ __('adminlte::menu.change_password') }}</td>
@@ -49,16 +49,16 @@
                       </tr>
                       <tr>
                         <td>{{ __('adminlte::menu.address') }}</td>
-                        <td>Santiago Road number 2</td>
+                        <td>{{ Auth::user()->address }}</td>
                       </tr>
                     </tbody>
                     <tr>
                         <td>{{ __('adminlte::menu.hp') }}</td>
-                        <td>089765342115</td>
+                        <td>{{ Auth::user()->phone }}</td>
                       </tr>
                       <tr>
                         <td>{{ __('adminlte::menu.role') }}</td>
-                        <td>Admin</td>
+                        <td>{{ Auth::user()->roles->name }}</td>
                       </tr>
                       <tr>
                           <td>{{ __('adminlte::menu.change_picture') }}</td>

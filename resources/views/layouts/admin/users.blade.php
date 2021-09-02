@@ -22,8 +22,8 @@
         <div class="col col-md-6"  >
           <div class="card mb-3"  >
             <div class="row" style="height: 350px !important;">
-              <div class="col-md-4 mt-4" style="display: block;">
-                <img src="@if($user->profilepic != null) {{ url($user->profilepic) }} @else {{ asset('images/user_profile.png')}} @endif" class="  img-fluid rounded-start " alt="...">
+              <div class="col-md-4 mt-4 pl-5" style="display: block;">
+                <img src="@if($user->profilepic != null) {{ url($user->profilepic) }} @else {{ asset('images/user_profile.png')}} @endif" class=" rounded-circle img-fluid rounded-start " alt="profile picture">
               </div>
               <div class="col-md-8" >
                 <div class="card-body">
