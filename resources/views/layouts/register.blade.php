@@ -16,13 +16,13 @@
         <div class="card position-absolute top-50 start-50 translate-middle" style="width: 30rem; height: 37rem; ">
             <div class="card-body ">
                 <b>
-                    <h5 class="start-50 position-absolute translate-middle text-dark mt-3">Halaman Daftar</h5>
+                    <h5 class="start-50 position-absolute translate-middle text-dark mt-3">{{ __('adminlte::adminlte.sign_up_page') }}</h5>
                 </b>
                 <div class="start-50 mt-n1 start-0 w-100 px-5 p-5">
-                    <label for="name" class="form-label">Nama Pengguna</label>
+                    <label for="name" class="form-label">{{ __('adminlte::adminlte.username') }}</label>
                     <input type="name" name="name" class="form-control" id="exampleFormControlInput1"
                         value="{{ old('name') }}" placeholder="Name" required>
-                    <label for="address" class="form-label">Alamat Rumah</label>
+                    <label for="address" class="form-label">{{ __('adminlte::adminlte.address') }}</label>
                     <input type="address" name="address" class="form-control" id="exampleFormControlInput1"
                         value="{{ old('address') }}" placeholder="Borobudur Road number 1, Yogyakarta" required>
                     <label for="email" class="form-label">Email</label>
@@ -34,7 +34,7 @@
                         {{ $message }}
                     </div>
                     @enderror
-                    <label for="password" class="form-label mt-2">Password</label>
+                    <label for="password" class="form-label mt-2">{{ __('adminlte::adminlte.password') }}</label>
                     <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
                         id="exampleFormControlInput1" placeholder="Password" required>
                     @error('password')
@@ -42,21 +42,21 @@
                         {{ $message }}
                     </div>
                     @enderror
-                    <label for="phone" class="form-label">No HP</label>
+                    <label for="phone" class="form-label">{{ __('adminlte::adminlte.phone') }}</label>
                     <input type="phone" name="phone" class="form-control  @error('phone') is-invalid @enderror" id="phone" value="{{ old('phone') }} " placeholder="No Handphone" required>
                     @error('phone')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                     @enderror
-                    <label for="profilepic" class="form-label">Profile Picture</label>
+                    <label for="profilepic" class="form-label">{{ __('adminlte::adminlte.profile_pict') }}</label>
                     <input type="file" accept="image/*" name="profilepic" class="form-control" id="profilepic"
                         value="{{ old('profilepic') }}" placeholder="Upload your image here">
                 </div>
 
                 <button type="submit"
                     class="start-50 position-absolute bottom-0  translate-middle btn btn-primary text-light"
-                    style="margin-bottom:5%;">Sign Up</button>
+                    style="margin-bottom:5%;">{{ __('adminlte::adminlte.sign_up') }}</button>
                 {{-- <a href="index.html" class="position-absolute bottom-0 end-0 px-5 p-5 mt-1">Menu</a> --}}
             </div>
         </div>

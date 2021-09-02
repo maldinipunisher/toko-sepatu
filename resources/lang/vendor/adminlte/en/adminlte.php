@@ -12,6 +12,7 @@ return [
     'i_forgot_my_password'        => 'I forgot my password',
     'i_already_have_a_membership' => 'I already have a membership',
     'sign_in'                     => 'Sign In',
+    'sign_up'                     => 'Register',
     'log_out'                     => 'Log Out',
     'toggle_navigation'           => 'Toggle navigation',
     'login_message'               => 'Sign in to start your session',
@@ -25,4 +26,11 @@ return [
     'verify_if_not_recieved'      => 'If you did not receive the email',
     'verify_request_another'      => 'click here to request another',
     'confirm_password_message'    => 'Please, confirm your password to continue.',
+    'login_page'                  => 'Login Page',
+    'sign_up_page'                => 'Sign Up page',
+    'username'                    => 'Username',
+    'address'                     => 'Address',
+    'phone'                       => 'Phone',
+    'profile_pict'                => 'Profile Picture'
+
 ];

@@ -21,7 +21,7 @@
     <div class="card-body ">
 
       <b>
-        <h5 class="start-50 position-absolute translate-middle text-dark mt-3">Halaman Login</h5>
+        <h5 class="start-50 position-absolute translate-middle text-dark mt-3">{{ __('adminlte::adminlte.login_page') }}</h5>
       </b>
       <div class=" start-50  position-absolute translate-middle rounded-circle bg-primary" style="height: 8em; width: 8em; margin-top: 8em; z-index: 0;">
         <b><i class="text-light bi bi-shield-lock start-50 position-absolute" style="font-size: 5em;transform: translate(-50%, 5%) ; z-index: 1;"></i></b>
@@ -39,8 +39,8 @@
                 <label for="password" class="form-label mt-2">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
               </div>
-              <button type="submit" class="start-50 position-absolute bottom-0 my-3 translate-middle btn btn-primary text-light">Login</button>
-              <a href="{{ route('register') }}" class="position-absolute bottom-0 end-0 px-5 p-5 mt-1">Sign Up</a>
+              <button type="submit" class="start-50 position-absolute bottom-0 my-3 translate-middle btn btn-primary text-light">{{ __('adminlte::adminlte.sign_in') }}</button>
+              <a href="{{ route('register') }}" class="position-absolute bottom-0 end-0 px-5 p-5 mt-1">{{ __('adminlte::adminlte.sign_up') }}</a>
     </form>
     </div>
   </div>

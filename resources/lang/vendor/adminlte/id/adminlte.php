@@ -12,6 +12,7 @@ return [
     'i_forgot_my_password'        => 'Saya lupa kata sandi',
     'i_already_have_a_membership' => 'Saya telah menjadi anggota',
     'sign_in'                     => 'Masuk',
+    'sign_up'                     => 'Daftar',
     'log_out'                     => 'Keluar',
     'toggle_navigation'           => 'Toggle navigasi',
     'login_message'               => 'Masuk untuk memulai sesi Anda',
@@ -25,4 +26,10 @@ return [
     'verify_if_not_recieved'      => 'Jika Anda tidak menerima email',
     'verify_request_another'      => 'klik disini untuk meminta ulang',
     'confirm_password_message'    => 'Konfirmasi kata sandi Anda untuk melanjutkan',
+    'login_page'                  => 'Halaman Login',
+    'sign_up_page'                => 'Halaman Daftar',
+    'username'                    => 'Nama User',
+    'address'                     => 'Alamat Rumah',
+    'phone'                       => 'Nomor Handphone',
+    'profile_pict'                => 'Foto Profil'
 ];
