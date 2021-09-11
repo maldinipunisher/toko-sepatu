@@ -1,5 +1,6 @@
 <div class="bg-white border-bottom" style="height: 6em;">
     <div class="container ">
+
         <nav class="navbar navbar-expand-sm navbar-light ">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -38,7 +39,7 @@
                                             class="bi bi-suit-heart"></i></b></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link my-auto" style="font-size: 24px;" href="purchase.html"><i
+                                <a class="nav-link my-auto" style="font-size: 24px;" href="/cart"><i
                                         class="bi bi-cart4"></i></a>
                             </li>
                             <li class="nav-item">
@@ -87,6 +88,12 @@
 </div>
 
 <div class="bg-light border-bottom ">
+    @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                <strong>{{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        @endif
     <div class="container">
         <center>
             <div class="row py-2">

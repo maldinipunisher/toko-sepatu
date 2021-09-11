@@ -14,10 +14,9 @@ class ProductUserSeeders extends Seeder
      */
     public function run()
     {
-        $pu = new ProductUser();
-        // $pu->id = 1;
-        $pu->product = 101 ;
-        $pu->user = 1 ;
-        $pu->save();
+        // $pu = new ProductUser();
+        // $pu->product = 101 ;
+        // $pu->user = 1 ;
+        // $pu->save();
     }
 }

@@ -14,7 +14,7 @@ class CreateMarketsTable extends Migration
     public function up()
     {
         Schema::create('market', function (Blueprint $table) {
-            $table->integer('market_id')->unique()->primary();
+            $table->string('market_id',20)->unique()->primary();
             // $table->timestamps();
             $table->string("income", 45);
             $table->string("outcome", 45);

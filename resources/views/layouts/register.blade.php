@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.css') }}">
     <title>Daftar</title>
 </head>
@@ -16,7 +16,8 @@
         <div class="card position-absolute top-50 start-50 translate-middle" style="width: 30rem; height: 37rem; ">
             <div class="card-body ">
                 <b>
-                    <h5 class="start-50 position-absolute translate-middle text-dark mt-3">{{ __('adminlte::adminlte.sign_up_page') }}</h5>
+                    <h5 class="start-50 position-absolute translate-middle text-dark mt-3">
+                        {{ __('adminlte::adminlte.sign_up_page') }}</h5>
                 </b>
                 <div class="start-50 mt-n1 start-0 w-100 px-5 p-5">
                     <label for="name" class="form-label">{{ __('adminlte::adminlte.username') }}</label>
@@ -30,26 +31,29 @@
                         id="exampleFormControlInput1" value="{{ old('email') }}" placeholder="name@example.com"
                         required>
                     @error('email')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                     @enderror
                     <label for="password" class="form-label mt-2">{{ __('adminlte::adminlte.password') }}</label>
                     <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
                         id="exampleFormControlInput1" placeholder="Password" required>
                     @error('password')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                     @enderror
+
                     <label for="phone" class="form-label">{{ __('adminlte::adminlte.phone') }}</label>
-                    <input type="phone" name="phone" class="form-control  @error('phone') is-invalid @enderror" id="phone" value="{{ old('phone') }} " placeholder="No Handphone" required>
+                    <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror"
+                        id="phone" placeholder="+62 xxx" required>
                     @error('phone')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                     @enderror
-                    <label for="profilepic" class="form-label">{{ __('adminlte::adminlte.profile_pict') }}</label>
+                    <label for="profilepic"
+                        class="form-label">{{ __('adminlte::adminlte.profile_pict') }}</label>
                     <input type="file" accept="image/*" name="profilepic" class="form-control" id="profilepic"
                         value="{{ old('profilepic') }}" placeholder="Upload your image here">
                 </div>

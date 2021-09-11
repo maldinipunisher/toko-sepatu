@@ -14,9 +14,9 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->integer('product_id')->unique()->primary();
+            $table->string('product_id',20)->unique()->primary();
             $table->string('name', 70);
-            $table->string('description', 255);
+            $table->text('description');
             $table->integer('price');
             $table->integer('stock');
             $table->integer('supplier');
@@ -24,9 +24,9 @@ class CreateProductsTable extends Migration
             $table->string('updated_by', 10)->nullable();
             // $table->integer('users');
             // $table->foreign('users')->references('user_id')->on('users');
-            $table->integer('order')->nullable();
+            $table->string('order',20)->nullable();
             $table->foreign('order')->references('order_id')->on('orders');
-            $table->integer('market');
+            $table->string('market',20);
             $table->foreign('market')->references('market_id')->on('market');
             $table->integer('category');
             $table->foreign('category')->references('category_id')->on('category');

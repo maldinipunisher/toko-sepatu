@@ -9,12 +9,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Auth\Events\Registered;
 
 class LoginController extends Controller
 {
     public function register()
     {
         return view('layouts.register');
+    }
+
+    public function verification()
+    {
+        return view('layouts.verification');
     }
 
     public function register_action(Request $request)
@@ -24,46 +30,57 @@ class LoginController extends Controller
             'email' => 'required|unique:users|email:dns',
             'password' => 'required|min:6',
             'address' => 'required|max:120',
-            'phone' =>'min:11|max:13|required',
-            'profilepic' =>'',
+            'phone' => 'min:11|max:16|required',
+            'profilepic' => '',
         ]);
 
         $validateData['password'] = bcrypt($validateData['password']);
 
         $user = new User($validateData);
-        $user_id = rand(1,9999999999);
-        while(User::where('user_id', $user_id)->exists()){
-            $user_id = rand(1,9999999999);
+        $user_id = mt_rand(1, 99999);
+        while (User::where('user_id', $user_id)->exists()) {
+            $user_id = mt_rand(1, 99999);
         }
-        $user->role = 2 ;
+        $user->role = 2;
         $user->user_id = $user_id;
         // Storage::putFile($user->user_id ,new File("app/public/".$user->user_id), 'public' );
-        $path = $request->file('profilepic')->storeAs('public/profiles', $user->user_id .'.jpg');
-        $user->profilepic = Storage::url($path);
+        if ($request->profilepic != null) {
+            $path = $request->file('profilepic')->storeAs('public/profiles', $user->user_id . '.jpg');
+            $user->profilepic = Storage::url($path);
+        }
         // dd(url($user->profilepic));
+        event(new Registered($user));
 
         $user->save();
-        $request->session()->flash('success','Registrasi berhasil silahkan login');
+
+        $request->session()->flash('success', 'Registrasi berhasil cek email untuk konfirmasi.');
         return redirect('/login');
     }
 
-    public function login(){
+    public function login()
+    {
         return view('layouts.login');
     }
 
-    public function login_action(Request $request){
-        $credential = $request->validate(['email' => 'required',
-        'password' => 'required|min:6']);
-        if(Auth::attempt($credential)){
+    public function login_action(Request $request)
+    {
+        $credential = $request->validate([
+            'email' => 'required',
+            'password' => 'required|min:6'
+        ]);
+        if (Auth::attempt($credential)) {
             $request->session()->regenerate();
+            // dd(Auth::user()->getKey());
+            // dd(hash_equals((string) 6239679278,(string) Auth::user()->getKey()));
             // $role = Roles::find(2);
             // dd(Auth::user()->roles);
             return redirect('/');
         }
-        return back()->withErrors(['email'=>'identitas tidak cocok dengan akun manapun']);
-}
+        return back()->withErrors(['email' => 'identitas tidak cocok dengan akun manapun']);
+    }
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
 
         request()->session()->invalidate();
