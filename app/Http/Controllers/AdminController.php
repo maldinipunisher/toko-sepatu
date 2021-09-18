@@ -50,4 +50,8 @@ class AdminController extends Controller
         return view('layouts.admin.profile');
     }
 
+    public function reports(){
+        return view('layouts.admin.reports');
+    }
+
 }

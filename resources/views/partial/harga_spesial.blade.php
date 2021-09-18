@@ -17,7 +17,7 @@
                             <p class="pt-n3">Rp 350.000 - 500.000</p>
                         </b>
                         <i class="bi bi-plus-lg position-absolute bottom-0 end-0 px-3 p-3">
-                            <a href="purchase.html"> Tambahkan</a>
+                            <a href="detail"> Tambahkan</a>
                         </i>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         </b>
                         <br>
                         <i class="bi bi-plus-lg position-absolute bottom-0 end-0 px-3 p-3">
-                            <a href="purchase.html"> Tambahkan</a>
+                            <a href="detail"> Tambahkan</a>
                         </i>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                             <p class="pt-n3">Rp 700.000 - 1.000.000</p>
                         </b>
                         <i class="bi bi-plus-lg position-absolute bottom-0 end-0 px-3 p-3">
-                            <a href="purchase.html"> Tambahkan</a>
+                            <a href="detail"> Tambahkan</a>
                         </i>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                             <p class="pt-n3">Rp 250.000,00 - 300.000,00</p>
                         </b>
                         <i class="bi bi-plus-lg position-absolute bottom-0 end-0 px-3 p-3">
-                            <a href="purchase.html"> Tambahkan</a>
+                            <a href="detail"> Tambahkan</a>
                         </i>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                             <p class="pt-n3">Rp 400.000,00 - 700.000,00</p>
                         </b>
                         <i class="bi bi-plus-lg position-absolute bottom-0 end-0 px-3 p-3">
-                            <a href="purchase.html"> Tambahkan</a>
+                            <a href="detail"> Tambahkan</a>
                         </i>
                     </div>
                 </div>

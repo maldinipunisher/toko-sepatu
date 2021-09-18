@@ -31,6 +31,7 @@ return [
     'username'                    => 'Username',
     'address'                     => 'Address',
     'phone'                       => 'Phone',
-    'profile_pict'                => 'Profile Picture'
+    'profile_pict'                => 'Profile Picture',
+    'report'                      => 'Reports'
 
 ];

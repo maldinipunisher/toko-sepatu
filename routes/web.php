@@ -17,6 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'home']);
+Route::get('/cart', [PageController::class, 'cart']);
+Route::get('/payment', [PageController::class, 'payment']);
+Route::get('/pengiriman', [PageController::class, 'pengiriman']);
+Route::get('/penawaran', [PageController::class, 'penawaran']);
+Route::get('/detail', [PageController::class, 'detail']);
+Route::get('/tipe', [PageController::class, 'tipe']);
+Route::get('/diskon', [PageController::class, 'diskon']);
 
 Route::get('/register', [LoginController::class,'register'])->name('register')->middleware('guest');
 Route::post('/register', [LoginController::class , 'register_action'])->name('register_action');
@@ -30,6 +37,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/users', [AdminController::class, 'users'])->middleware('role:admin');
         Route::post('/users', [AdminController::class, 'users_action'])->middleware('role:admin');
         Route::get('/profile', [AdminController::class, 'profile'])->middleware('role:admin');
+        Route::get('/reports', [AdminController::class, 'reports'])->middleware('role:admin');
     });
     // Route::get('/login',[AdminController::class, 'login'])->middleware('guest');
     // Route::post('/login',[AdminController::class, 'login_action'])->middleware('guest');

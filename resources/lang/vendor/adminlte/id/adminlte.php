@@ -31,5 +31,7 @@ return [
     'username'                    => 'Nama User',
     'address'                     => 'Alamat Rumah',
     'phone'                       => 'Nomor Handphone',
-    'profile_pict'                => 'Foto Profil'
+    'profile_pict'                => 'Foto Profil',
+    'report'                      => 'Laporan'
+
 ];

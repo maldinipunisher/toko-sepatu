@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+  <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.css') }}">
+  <title>TokoSepatu</title>
+</head>
+<style>
+.garis_verikal{
+border-left: 1px black solid;
+height: 500;
+width: 0px;
+margin-top: 20px;
+}
+
+
+</style>
+
+<body>
+
+
+{{-- navbar --}}
+
 <div class="bg-white border-bottom" style="height: 6em;">
     <div class="container ">
         <nav class="navbar navbar-expand-sm navbar-light ">
@@ -96,7 +126,7 @@
                             <i class="bi bi-lightning" style="color: #FFE65B"></i>Penawaran Hari Ini</a></b>
                 </div>
                 <div class="col my-auto">
-                    <b><a class=" link-dark" style="text-decoration: none;" href="diskon">
+                    <b><a class=" link-dark" style="text-decoration: none;" href="#">
                             <i class="bi bi-tag"></i>Harga Spesial</a></b>
                 </div>
                 <div class="col my-auto">
@@ -104,12 +134,12 @@
                         <div class="dropdown ">
                             <a class=" dropdown-toggle link-dark" style="text-decoration: none;" href="#"
                                 id="runningShoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tipe Sepatu
+                                Sepatu Lari
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="runningShoesDropdown">
-                                <li><a class="dropdown-item text-dark" href="tipe">Ringan</a></li>
-                                <li><a class="dropdown-item text-dark" href="tipe">Jarak Jauh</a></li>
-                                <li><a class="dropdown-item text-dark" href="tipe">Stabilitas</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Ringan</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Jarak Jauh</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">Stabilitas</a></li>
                             </ul>
                         </div>
                     </b>
@@ -123,3 +153,81 @@
         </center>
     </div>
 </div>
+
+
+{{-- navbar --}}
+
+
+
+
+
+
+  <div class="card mt-4" style="width: 65rem; height: 35rem; margin-left: 250px;">
+    <div class="container ">
+        <div class="row">
+          <div class="col" style="margin-top : 30px ;">
+            <img src="/images/merk4.jpg" alt="sepatu" width="430" height="500" style="margin-left: 25px;" >
+          </div>
+          <div class="garis_verikal"></div>
+          <div class="col" style="margin-top : 30px ;">
+            <center><h2>Detail Produk</h2></center>
+            <br>
+            <h6>Kode Produk </h6>
+            <hr>
+            <h6>Point Reward </h6>
+            <hr>
+            <h6>Ketersediaan </h6>
+            <hr>
+            <br>
+            <h4 class="text-primary ">Rp. 600.000 </h4>
+            <br>
+            <h6>Warna </h6>
+            <div class="btn-group text-light">
+                <button type="button" class="btn btn-primary dropdown-toggle text-light" data-bs-toggle="dropdown" aria-expanded="false">
+                  Silahkan Pilih
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+
+              </div>
+              <br><br>
+            <h6>Ukuran </h6>
+
+            <button type="button" class="btn btn-primary dropdown-toggle text-light" data-bs-toggle="dropdown" aria-expanded="false">
+                Silahkan Pilih
+              </button>
+              <ul class="dropdown-menu text-light">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-light" href="#">Separated link</a></li>
+              </ul>
+
+              <button type="button" class="btn btn-primary text-light" style="margin-left: 130px;">Tambah ke Keranjang</button>
+
+              <br><br><br>
+              <a href="/" style="margin-left: 420px;">Kembali</a>
+            </div>
+
+            <p></p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+  </div>
+
+  <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>
