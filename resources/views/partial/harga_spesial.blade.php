@@ -4,7 +4,7 @@
         @foreach ($products as $product)
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/jenis1.jpg" class="card-img-top" alt="...">
+                    <img src="@if($product->product_photo != null) {{$product->profile_photo}} @else images/no_image.png @endif" class="card-img-top" alt="...">
                     <div class="card-body">
                         <b>
                             <h5 class="card-title">{{ $product->name }}</h5>

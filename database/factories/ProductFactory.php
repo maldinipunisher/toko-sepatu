@@ -34,7 +34,8 @@ class ProductFactory extends Factory
             'stock'=>$this->faker->randomNumber(3),
             'supplier'=> 1 ,
             'market' => 1 ,
-            'category' => 1
+            'category' => 1 ,
+            'product_photo' => null
         ];
     }
 }

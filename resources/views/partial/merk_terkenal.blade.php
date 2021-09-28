@@ -5,7 +5,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4 py-4">
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/merk1.jpg" class="card-img-top" alt="...">
+                    <img src="images/no_image.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <b>
                             <h5 class="card-title">Adidas</h5>
@@ -17,7 +17,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/merk4.jpg" class="card-img-top" alt="...">
+                    <img src="images/no_image.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <b>
                             <h5 class="card-title">Newton</h5>
@@ -29,7 +29,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="images/merk2.jpg" class="card-img-top" alt="...">
+                    <img src="images/no_image.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <b>
                             <h5 class="card-title">Nike</h5>

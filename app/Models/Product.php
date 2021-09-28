@@ -21,6 +21,7 @@ class Product extends Model
         'supplier',
         'category',
         'updated_by',
+        'product_photo',
         // 'cart',
         'order',
         // 'market',

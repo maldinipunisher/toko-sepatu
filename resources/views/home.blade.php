@@ -44,7 +44,7 @@
     @include('partial.carousel')
     @include('partial.merk_terkenal')
     @include('partial.harga_spesial')
-    @include('partial.kelebihan')
+    @include('partial.tentang')
     @include('partial.testimony')
     @include('partial.footer')
 

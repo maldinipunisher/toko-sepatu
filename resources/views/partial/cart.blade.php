@@ -164,94 +164,51 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="col">
-                            <table>
-                                <tbody>
-                                    <td>
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </td>
-                                    <td>
-                                        <b>Nike</b>
-                                        <img src="https://image.flaticon.com/icons/png/512/3892/3892943.png"
-                                            width="20px" height="20px">
-                                    </td>
-                                </tbody>
-                            </table>
-                            <p class="card-text px-4" style="font-size: 13px;">Kota Surabaya</p>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//100/MTA-20844864/nike_sepatu_wanita_nike_air_max_command_black_-_white_original_bnwb_full01_642d7176.jpg"
-                                            width="120px" height="120px">
-                                    </div>
-                                    <div class="col" style="margin-right: 10px;">
-                                        <p class>Nike Air Series 3000</p>
-                                        <p class="mb-4" style="font-size: 13px; color:green;">Tersisa : 5</p>
-                                        <b>
-                                            <p class="mb-4">Rp 500.000</p>
-                                        </b>
-                                    </div>
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <p class="mb-4" style="font-size: 14px; color:green;">Tulis catatan
-                                                    untuk barang ini</p>
-                                            </div>
-                                            <div class="col">
-                                                <P>Item :</P>
-                                            </div>
-                                            <div class="col">
-                                                <input type="Number" id="fname" name="fname" style="width: 60px;">
+                        @foreach ($products as $product)
+                        <tr>
+                            <td scope="col">
+                                <table>
+                                    <tbody>
+                                        <td>
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </td>
+                                        <td>
+                                            <b>{{$product->suppliers->name}}</b>
+                                            <img src="https://image.flaticon.com/icons/png/512/3892/3892943.png"
+                                                width="20px" height="20px">
+                                        </td>
+                                    </tbody>
+                                </table>
+                                <p class="card-text px-4" style="font-size: 13px;">{{$product->categories->name}}</p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="@if($product->product_photo != null ) {{$product->product_photo}} @else images/no_image.png @endif"
+                                                width="120px" height="120px">
+                                        </div>
+                                        <div class="col" style="margin-right: 10px;">
+                                            <p class>{{$product->name}}</p>
+                                            <p class="mb-4" style="font-size: 13px; color:green;">Tersisa : {{$product->stock}}</p>
+                                            <b>
+                                                <p class="mb-4">Rp. {{$product->price}}</p>
+                                            </b>
+                                        </div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <p class="mb-4" style="font-size: 14px; color:green;">Tulis catatan
+                                                        untuk barang ini</p>
+                                                </div>
+                                                {{-- <div class="col">
+                                                    <P>Item : {{$product->}}</P>
+                                                </div> --}}
+
                                             </div>
                                         </div>
-                                    </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td scope="col">
-                            <table>
-                                <tbody>
-                                    <td>
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </td>
-                                    <td>
-                                        <b>Nike</b>
-                                        <img src="https://image.flaticon.com/icons/png/512/3892/3892943.png"
-                                            width="20px" height="20px">
-                                    </td>
-                                </tbody>
-                            </table>
-                            <p class="card-text px-4" style="font-size: 13px;">Kota Surabaya</p>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//100/MTA-20844864/nike_sepatu_wanita_nike_air_max_command_black_-_white_original_bnwb_full01_642d7176.jpg"
-                                            width="120px" height="120px">
-                                    </div>
-                                    <div class="col" style="margin-right: 10px;">
-                                        <p class>Nike Air Series 3000</p>
-                                        <p class="mb-4" style="font-size: 13px; color:green;">Tersisa : 5</p>
-                                        <b>
-                                            <p class="mb-4">Rp 500.000</p>
-                                        </b>
-                                    </div>
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <p class="mb-4" style="font-size: 14px; color:green;">Tulis catatan
-                                                    untuk barang ini</p>
-                                            </div>
-                                            <div class="col">
-                                                <P>Item :</P>
-                                            </div>
-                                            <div class="col">
-                                                <input type="Number" id="fname" name="fname" style="width: 60px;">
-                                            </div>
-                                        </div>
-                                    </div>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
+                        @endforeach
+
 
                 </tbody>
             </table>

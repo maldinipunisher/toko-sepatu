@@ -27,6 +27,7 @@ class CreateProductsTable extends Migration
             $table->string('order',20)->nullable();
             $table->foreign('order')->references('order_id')->on('orders');
             $table->string('market',20);
+            $table->string('product_photo', 255)->nullable();
             $table->foreign('market')->references('market_id')->on('market');
             $table->integer('category');
             $table->foreign('category')->references('category_id')->on('category');

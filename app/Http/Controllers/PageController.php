@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -12,7 +13,8 @@ class PageController extends Controller
         return view('home')->with('products', $products);
     }
     public function cart() {
-        return view('partial.cart');
+        $products = Auth::user()->products;
+        return view('partial.cart')->with('products', $products);
     }
     public function payment() {
         return view('partial.payment');

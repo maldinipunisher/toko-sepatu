@@ -20,14 +20,6 @@ class CartController extends Controller
     }
 
     public function cart(){
-        // $cart = ProductUser::all()->where('user', Auth::user()->user_id);
-        $products = Auth::user()->products;
-        foreach ($products  as $product) {
-            return array('products' => array(
-                'id' => $product->product_id,
-                'name' => $product->name,
-            ));
-        }
-
+       return  $products = Auth::user()->products;
     }
 }

@@ -28,7 +28,7 @@ Route::get('/verification/{id}/{hash}', function (EmailVerificationRequest $requ
     return redirect('/');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 Route::get('/', [PageController::class, 'home']);
-Route::get('/cart', [CartController::class, 'cart'])->middleware('auth');
+Route::get('/cart', [PageController::class, 'cart'])->middleware('auth');
 Route::get('/register', [LoginController::class, 'register'])->name('register')->middleware('guest');
 Route::post('/register', [LoginController::class, 'register_action'])->name('register_action');
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
